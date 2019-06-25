@@ -1,50 +1,43 @@
 {
   "project_info": {
-    "project_number": "849844226019",
-    "firebase_url": "https://test-1b5bc.firebaseio.com",
-    "project_id": "test-1b5bc",
-    "storage_bucket": "test-1b5bc.appspot.com"
+    "project_number": "127303800165",
+    "firebase_url": "https://carcora-60734.firebaseio.com",
+    "project_id": "carcora-60734",
+    "storage_bucket": "carcora-60734.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:849844226019:android:7738fe742be9f442",
+        "mobilesdk_app_id": "1:127303800165:android:fea94e4aff9726c0",
         "android_client_info": {
-          "package_name": "com.example.login"
+          "package_name": "com.carcora.product"
         }
       },
       "oauth_client": [
         {
-          "client_id": "849844226019-gaof55d89t1kgprfod7aiaehertv4nd9.apps.googleusercontent.com",
+          "client_id": "127303800165-1ko9uqk6diqjor0a49skre7q2pbp2cdf.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.login",
+            "package_name": "com.carcora.product",
             "certificate_hash": "86228b0fe76977be4fa0ba59fa6e70aeeefa2588"
           }
         },
         {
-          "client_id": "849844226019-k0ivhqno35uggtgf4itonsb3jk47vc93.apps.googleusercontent.com",
+          "client_id": "127303800165-o3g80i6lqpc0m4keffjratu1kq10gd3u.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCplV3CK5zawIh5ncjVg6cPlcFQhbnOzpg"
+          "current_key": "AIzaSyDFY6vRAFoQYycruHZw_jY34JmTN6hRaRw"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "849844226019-k0ivhqno35uggtgf4itonsb3jk47vc93.apps.googleusercontent.com",
+              "client_id": "127303800165-o3g80i6lqpc0m4keffjratu1kq10gd3u.apps.googleusercontent.com",
               "client_type": 3
-            },
-            {
-              "client_id": "849844226019-oelnjnpbtlnacarert3a5d7vt23ff9su.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.login"
-              }
             }
           ]
         }

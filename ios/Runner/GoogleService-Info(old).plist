@@ -3,23 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>127303800165-1fe4qm1ntvhggc23omkm93jspfslo87f.apps.googleusercontent.com</string>
+	<string>849844226019-oelnjnpbtlnacarert3a5d7vt23ff9su.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.127303800165-1fe4qm1ntvhggc23omkm93jspfslo87f</string>
-	<key>ANDROID_CLIENT_ID</key>
-	<string>127303800165-1ko9uqk6diqjor0a49skre7q2pbp2cdf.apps.googleusercontent.com</string>
+	<string>com.googleusercontent.apps.849844226019-oelnjnpbtlnacarert3a5d7vt23ff9su</string>
 	<key>API_KEY</key>
-	<string>AIzaSyBrGH2oJd3wKfIElscReuvSGLN31QMmOao</string>
+	<string>AIzaSyAQw3w13Ej5VR6vVGHD1BHP8RORizdwczM</string>
 	<key>GCM_SENDER_ID</key>
-	<string>127303800165</string>
+	<string>849844226019</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.carcora.product</string>
+	<string>com.example.login</string>
 	<key>PROJECT_ID</key>
-	<string>carcora-60734</string>
+	<string>test-1b5bc</string>
 	<key>STORAGE_BUCKET</key>
-	<string>carcora-60734.appspot.com</string>
+	<string>test-1b5bc.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -31,8 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:127303800165:ios:fea94e4aff9726c0</string>
+	<string>1:849844226019:ios:7738fe742be9f442</string>
 	<key>DATABASE_URL</key>
-	<string>https://carcora-60734.firebaseio.com</string>
+	<string>https://test-1b5bc.firebaseio.com</string>
 </dict>
 </plist>

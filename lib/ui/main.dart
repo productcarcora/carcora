@@ -2,7 +2,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:login/services/Auth.dart';
 import 'secondscreen.dart';
+import '../models/user.dart';
 
 void main() => runApp(MyApp());
 
@@ -65,21 +67,19 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  final FirebaseAuth fbAuth = FirebaseAuth.instance;
-  final Firestore db = Firestore.instance;
-  final GoogleSignIn googleSignIn = new GoogleSignIn();
+  /*  final FirebaseAuth fbAuth = FirebaseAuth.instance;
+  final Firestore db = Firestore.instance; */
   void _signInWithGoogle() async {
     try {
-      //FirebaseUser User;
-      final GoogleSignInAccount googleSignInAccount =
-          await googleSignIn.signIn();
-      final GoogleSignInAuthentication googleSignInAuthentication =
-          await googleSignInAccount.authentication;
-      final AuthCredential authCredential = GoogleAuthProvider.getCredential(
-          accessToken: googleSignInAuthentication.accessToken,
-          idToken: googleSignInAuthentication.idToken);
-      FirebaseUser user = await fbAuth.signInWithCredential(authCredential);
-      print(user);
+      await Auth.signInWithGoogle().then((user) => {
+            Auth.addUser(new User(
+              firstName: user.displayName,
+              userID: user.uid,
+              email: user.email ?? '',
+              profilePictureURL: user.photoUrl ?? '',
+            ))
+          });
+      Navigator.of(context).pop();
     } catch (e) {
       print(e);
     } finally {

@@ -15,6 +15,11 @@ class Auth {
     return user.uid;
   }
 
+  /* static Future<String> signInWithFacebok(String accessToken) async {
+    FirebaseUser user = await FirebaseAuth.instance
+        .signInWithFacebook(accessToken: accessToken);
+    return user.uid;
+  } */
   static Future<FirebaseUser> signInWithGoogle() async {
     final GoogleSignInAccount googleSignInAccount = await googleSignIn.signIn();
     final GoogleSignInAuthentication googleSignInAuthentication =
@@ -26,11 +31,6 @@ class Auth {
         await FirebaseAuth.instance.signInWithCredential(authCredential);
     return user;
   }
-  /* static Future<String> signInWithFacebok(String accessToken) async {
-    FirebaseUser user = await FirebaseAuth.instance
-        .signInWithFacebook(accessToken: accessToken);
-    return user.uid;
-  }  */
 
   static Future<String> signUp(String email, String password) async {
     FirebaseUser user = await FirebaseAuth.instance

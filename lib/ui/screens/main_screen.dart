@@ -1,8 +1,10 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:login/business/auth.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:login/models/user.dart';
 import './tab_screens.dart';
+import './carcora_service.dart';
 
 class MainScreen extends StatefulWidget {
   final FirebaseUser firebaseUser;
@@ -17,7 +19,7 @@ class _MainScreenState extends State<MainScreen> {
   int _currentIndex = 0;
   final List<Widget> _children = [];
   List<Widget> tabs = [
-    TabScreen(Colors.green),
+    CarcoraService(Colors.green),
     TabScreen(Colors.orange),
     TabScreen(Colors.blue),
     TabScreen(Colors.black),
@@ -46,6 +48,7 @@ class _MainScreenState extends State<MainScreen> {
           padding: EdgeInsets.zero,
           children: <Widget>[
             DrawerHeader(
+              decoration: new BoxDecoration(color: Colors.blue),
               child: StreamBuilder(
                 stream: Auth.getUser(widget.firebaseUser.uid),
                 builder: (BuildContext context, AsyncSnapshot<User> snapshot) {

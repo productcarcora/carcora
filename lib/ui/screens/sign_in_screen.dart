@@ -125,7 +125,7 @@ class _SignInScreenState extends State<SignInScreen> {
                       padding: const EdgeInsets.symmetric(
                           vertical: 14.0, horizontal: 40.0),
                       child: CustomFlatButton(
-                        title: "Facebook Login",
+                        title: "Google Login",
                         fontSize: 22,
                         fontWeight: FontWeight.w700,
                         textColor: Colors.white,
@@ -198,6 +198,7 @@ class _SignInScreenState extends State<SignInScreen> {
 
   void _signInWithGoogle() async {
     try {
+      _changeBlackVisible();
       await Auth.signInWithGoogle().then((user) => {
             Auth.addUser(new User(
               firstName: user.displayName,
@@ -206,7 +207,7 @@ class _SignInScreenState extends State<SignInScreen> {
               profilePictureURL: user.photoUrl ?? '',
             ))
           });
-      //Navigator.of(context).pop();
+      Navigator.of(context).pop();
     } catch (e) {
       print(e);
     } finally {

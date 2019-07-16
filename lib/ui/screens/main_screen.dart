@@ -19,11 +19,11 @@ class _MainScreenState extends State<MainScreen> {
   int _currentIndex = 0;
   final List<Widget> _children = [];
   List<Widget> tabs = [
-    CarcoraService(Colors.green),
     TabScreen(Colors.orange),
     TabScreen(Colors.blue),
-    TabScreen(Colors.black),
+    TabScreen(Colors.green),
     TabScreen(Colors.red),
+    CarcoraService(Colors.black)
   ];
   @override
   void initState() {

@@ -9,13 +9,13 @@ class ChoiceCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final TextStyle textStyle = Theme.of(context).textTheme.display1;
     return Card(
-        color: Colors.white,
+        color: choice.color,
         child: Center(
           child: Column(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                Icon(choice.icon, size: 80.0, color: textStyle.color),
+                Icon(choice.icon, size: 60.0, color: textStyle.color),
                 Text(choice.title, style: textStyle),
               ]),
         ));

@@ -39,7 +39,7 @@ class WelcomeScreen extends StatelessWidget {
               style: TextStyle(
                 color: Colors.black,
                 decoration: TextDecoration.none,
-                fontSize: 15.0,
+                fontSize: 12.0,
                 fontWeight: FontWeight.w300,
                 fontFamily: "OpenSans",
               ),

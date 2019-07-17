@@ -8,16 +8,46 @@ class ChoiceCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final TextStyle textStyle = Theme.of(context).textTheme.display1;
-    return Card(
-        color: choice.color,
-        child: Center(
-          child: Column(
+    return SizedBox(
+      width: 150.0,
+      height: 150.0,
+      child: Card(
+        // color: choice.color,
+        clipBehavior: Clip.hardEdge,
+        borderOnForeground: false,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(50.0),
+        ),
+        child: Container(
+          //color: choice.color,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(50.0), color: choice.color
+              /*  image: DecorationImage(
+            image: ExactAssetImage('assets/nature3.jpg'),
+            fit: BoxFit.cover,
+          ), */
+              ),
+          child: Center(
+            child: Column(
               mainAxisSize: MainAxisSize.min,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                Icon(choice.icon, size: 60.0, color: textStyle.color),
-                Text(choice.title, style: textStyle),
-              ]),
-        ));
+                Icon(choice.icon, size: 50.0, color: textStyle.color),
+                Text(
+                  choice.title,
+                  style: TextStyle(
+                    color: Colors.black,
+                    decoration: TextDecoration.none,
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.w300,
+                    fontFamily: "OpenSans",
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
   }
 }

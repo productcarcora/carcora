@@ -5,6 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:login/models/user.dart';
 import './tab_screens.dart';
 import './carcora_service.dart';
+import './google-Map.dart';
 
 class MainScreen extends StatefulWidget {
   final FirebaseUser firebaseUser;
@@ -20,9 +21,9 @@ class _MainScreenState extends State<MainScreen> {
   final List<Widget> _children = [];
   List<Widget> tabs = [
     TabScreen(Colors.orange),
-    TabScreen(Colors.blue),
     TabScreen(Colors.green),
     TabScreen(Colors.red),
+    MapData(),
     CarcoraService(Colors.black)
   ];
   @override
@@ -110,19 +111,19 @@ class _MainScreenState extends State<MainScreen> {
             title: Text("Home"),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.card_travel),
-            title: Text("Travel"),
+            icon: Icon(Icons.add_comment),
+            title: Text("Car"),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
             title: Text("Profile"),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.mail),
-            title: Text("Mail"),
+            icon: Icon(Icons.map),
+            title: Text("Map"),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.room_service),
+            icon: Icon(Icons.build),
             title: Text("Service"),
           ),
         ],
